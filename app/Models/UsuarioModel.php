@@ -20,8 +20,8 @@ class UsuarioModel extends Model{
     protected $validationRules   =[
         'nombre' => 'required|alpha_space|min_length[3]|max_length[75]',
         'apellido' => 'required|alpha_space|min_length[3]|max_length[75]',
-        'telefono' => 'required |min_length[3]|max_length[9]',
-        'email' => 'required |valid_email|max_length[100]',
+        'telefono' => 'required|min_length[3]|max_length[9]',
+        'email' => 'required|valid_email|max_length[100]',
     ];
     protected $validationMessages = [
         "email" => [
