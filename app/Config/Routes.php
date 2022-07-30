@@ -32,6 +32,12 @@ $routes->setAutoRoute(true);
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+//localhost:8080/api
+$routes->group('api',['namespace'=>'App\Controllers\API'],function($routes){
+    //localhost:8080/api/usuarios
+    $routes->get('usuarios','Usuario::index');
+});
+
 
 /*
  * --------------------------------------------------------------------
